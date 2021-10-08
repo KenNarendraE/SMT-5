@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".PengaturanActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/righteous"
+        android:text="Nama"
+        android:textColor="#757575"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/round_yellow"
+        android:ems="10"
+        android:hint="Ikomadin"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="#757575"
+        android:textColorHint="@color/l_gray" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/righteous"
+        android:text="Alamat"
+        android:textColor="#757575"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/round_yellow"
+        android:drawableRight="@drawable/ic_location"
+        android:ems="10"
+        android:hint="Jl.Kemiri"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:textColor="#757575"
+        android:textColorHint="@color/l_gray" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/righteous"
+        android:text="Nomor Telepon"
+        android:textColor="#757575"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/round_yellow"
+        android:ems="10"
+        android:hint="08123746778"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="#757575"
+        android:textColorHint="@color/l_gray" />
+
+    <Button
+        android:id="@+id/btnDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_btn"
+        android:fontFamily="@font/righteous"
+        android:text="Tampilkan Semua Iklan"
+        android:textColor="#757575" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/confirm_round"
+            android:fontFamily="@font/righteous"
+            android:foregroundGravity="bottom"
+            android:onClick="btnSimpan"
+            android:text="Simpan"
+            android:textColor="#757575"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
