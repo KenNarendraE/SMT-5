@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentOn">
-        <activity android:name=".CariIklanActivity"></activity>
+        <activity android:name=".PremiumActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".CariIklanActivity"
+            android:parentActivityName=".PengaturanActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Pengaturan2Activity"
             android:parentActivityName=".MainActivity"
@@ -24,11 +29,15 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".RegisterActivity"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DetailIklanActivity"
+            android:parentActivityName=".CariIklanActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LoginActivity"

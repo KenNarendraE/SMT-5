@@ -49,6 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/righteous"
+                    android:gravity="center"
                     android:text="Petunjuk Aplikasi"
                     android:textColor="#757575"
                     android:textSize="20sp" />
@@ -88,6 +89,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="@font/righteous"
                     android:foregroundGravity="center_vertical"
+                    android:gravity="center"
                     android:text="Bagikan Aplikasi"
                     android:textColor="#757575"
                     android:textSize="20sp" />
@@ -96,7 +98,6 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnAkun"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="12dp"
@@ -127,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/righteous"
-                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
                     android:text="Beli Premium"
                     android:textColor="#757575"
                     android:textSize="20sp" />
@@ -136,7 +137,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnPengaturan"
+            android:onClick="btnPAkun"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="12dp"
@@ -166,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/righteous"
-                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
                     android:text="Pengaturan Akun"
                     android:textColor="#757575"
                     android:textSize="20sp" />
@@ -188,9 +189,10 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/righteous"
             android:gravity="center"
             android:text="Hubungi Kami"
-            android:fontFamily="@font/righteous"
+            android:textColor="@color/l_gray"
             android:textSize="20sp" />
 
         <androidx.cardview.widget.CardView
@@ -204,7 +206,8 @@
             android:backgroundTint="#FFF7AD"
             app:cardCornerRadius="15dp"
             app:contentPaddingBottom="8dp"
-            app:contentPaddingTop="8dp">
+            app:contentPaddingTop="8dp"
+            app:contentPaddingRight="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -212,39 +215,50 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/facebook" />
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/instagram" />
+                    android:id="@+id/btnFB"
+                    app:srcCompat="@drawable/facebook"
+                    style="?android:borderlessButtonStyle"/>
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/whatsapp" />
+                    android:id="@+id/btnIG"
+                    app:srcCompat="@drawable/instagram"
+                    style="?android:borderlessButtonStyle"/>
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/linkedin" />
+                    android:id="@+id/btnWA"
+                    app:srcCompat="@drawable/whatsapp"
+                    style="?android:borderlessButtonStyle"/>
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/discord" />
+                    android:id="@+id/btnLI"
+                    app:srcCompat="@drawable/linkedin"
+                    style="?android:borderlessButtonStyle"/>
+
+                <ImageView
+                    android:onClick="btnDC"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/btnDC"
+                    app:srcCompat="@drawable/discord"
+                    style="?android:borderlessButtonStyle"/>
             </LinearLayout>
 
 

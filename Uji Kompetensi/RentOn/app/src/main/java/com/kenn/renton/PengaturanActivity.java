@@ -19,4 +19,9 @@ public class PengaturanActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void btnIklan(View view) {
+        Intent iklan = new Intent(this, CariIklanActivity.class);
+        startActivity(iklan);
+    }
 }

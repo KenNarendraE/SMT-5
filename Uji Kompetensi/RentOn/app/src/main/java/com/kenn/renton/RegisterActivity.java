@@ -13,6 +13,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().setTitle("Daftar");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void btnLogin(View view) {
