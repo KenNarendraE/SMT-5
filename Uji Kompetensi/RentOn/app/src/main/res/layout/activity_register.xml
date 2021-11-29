@@ -23,12 +23,11 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
         android:ems="10"
-        android:hint="Ikomadin"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textColor="#757575"
@@ -46,13 +45,36 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
         android:ems="10"
-        android:hint="Ikomadin@emailmu.com"
         android:inputType="textPersonName"
+        android:digits="0123456789@.qwertzuiopasdfghjklyxcvbnm"
+        android:paddingLeft="10dp"
+        android:textColor="#757575"
+        android:textColorHint="@color/l_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/righteous"
+        android:text="Password"
+        android:textColor="#757575"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/round_yellow"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="password minimal 8 digit"
+        android:digits="0123456789.qwertzuiopasdfghjklyxcvbnm"
         android:paddingLeft="10dp"
         android:textColor="#757575"
         android:textColorHint="@color/l_gray" />
@@ -69,14 +91,13 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/etAl"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
         android:drawableRight="@drawable/ic_location"
         android:paddingRight="20dp"
         android:ems="10"
-        android:hint="Jl.Kemiri"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textColor="#757575"
@@ -94,13 +115,12 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/etTp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
         android:ems="10"
-        android:hint="08123746778"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:paddingLeft="10dp"
         android:textColor="#757575"
         android:textColorHint="@color/l_gray" />
@@ -112,18 +132,18 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/righteous"
-        android:text="Tanggal Hari"
+        android:text="Umur"
         android:textColor="#757575"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/etUmur"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
         android:ems="10"
-        android:hint="19 Januari 2004"
-        android:inputType="textPersonName"
+        android:hint="Dalam satuan Tahun"
+        android:inputType="phone"
         android:drawableRight="@drawable/ic_tanggal"
         android:paddingRight="20dp"
         android:paddingLeft="10dp"
@@ -145,7 +165,7 @@
             android:fontFamily="@font/righteous"
             android:foregroundGravity="bottom"
             android:onClick="btnLogin"
-            android:text="Login"
+            android:text="Konfirmasi"
             android:textColor="#757575"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

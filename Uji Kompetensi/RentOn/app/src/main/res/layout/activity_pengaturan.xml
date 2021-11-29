@@ -88,16 +88,27 @@
         android:textColor="#757575"
         android:textColorHint="@color/l_gray" />
 
-    <Button
-        android:onClick="btnIklan"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/righteous"
+        android:text="Email"
+        android:textColor="#757575"
+        android:textSize="18sp" />
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/register_btn"
-        android:fontFamily="@font/righteous"
-        android:text="Tampilkan Semua Iklan"
-        android:textColor="#757575" />
+        android:background="@drawable/round_yellow"
+        android:ems="10"
+        android:hint="arduino.smd@gmail.com"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="#757575"
+        android:textColorHint="@color/l_gray" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

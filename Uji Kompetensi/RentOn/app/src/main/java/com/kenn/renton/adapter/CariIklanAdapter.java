@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.kenn.renton.DetailIklanActivity;
 import com.kenn.renton.MainActivity;
 import com.kenn.renton.R;
@@ -38,21 +40,28 @@ public class CariIklanAdapter extends RecyclerView.Adapter<CariIklanAdapter.Cari
         return new CariIklanViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull CariIklanAdapter.CariIklanViewHolder holder, int position) {
         holder.tvHarga.setText(listIklan.get(position).getHarga());
         holder.tvNama.setText(listIklan.get(position).getNama());
         holder.tvLokasi.setText(listIklan.get(position).getLokasi());
         holder.tvWaktu.setText(listIklan.get(position).getWaktu());
+        holder.tvGambar.setText(listIklan.get(position).getGambar());
+        Glide.with(context).load("http://192.168.100.4:8081/upload/"+listIklan.get(position).getGambar()).into(holder.imGambar);
 
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailIklanActivity.class);
+                intent.putExtra("idiklan",listIklan.get(position).getIdiklan());
                 intent.putExtra("harga",listIklan.get(position).getHarga());
                 intent.putExtra("nama",listIklan.get(position).getNama());
                 intent.putExtra("lokasi",listIklan.get(position).getLokasi());
                 intent.putExtra("waktu",listIklan.get(position).getWaktu());
+                intent.putExtra("waktumax",listIklan.get(position).getWaktumax());
+                intent.putExtra("deskripsi",listIklan.get(position).getDeskripsi());
+                intent.putExtra("gambar",listIklan.get(position).getGambar());
                 context.startActivity(intent);
             }
         });
@@ -65,7 +74,8 @@ public class CariIklanAdapter extends RecyclerView.Adapter<CariIklanAdapter.Cari
 
     public class CariIklanViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView tvHarga, tvNama, tvLokasi, tvWaktu;
+        private TextView tvHarga, tvNama, tvLokasi, tvWaktu, tvGambar;
+        ImageView imGambar;
         LinearLayout item;
 
         public CariIklanViewHolder (View view){
@@ -76,6 +86,8 @@ public class CariIklanAdapter extends RecyclerView.Adapter<CariIklanAdapter.Cari
             tvNama = view.findViewById(R.id.tvNama);
             tvLokasi = view.findViewById(R.id.tvLokasi);
             tvWaktu = view.findViewById(R.id.tvWaktu);
+            tvGambar = view.findViewById(R.id.tvGambar);
+            imGambar = view.findViewById(R.id.imGambar);
         }
     }
 

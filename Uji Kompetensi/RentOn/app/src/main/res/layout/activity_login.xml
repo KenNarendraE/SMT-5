@@ -36,7 +36,7 @@
         android:src="@drawable/profile" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etEmail"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -54,7 +54,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/etPassword"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -65,17 +65,30 @@
         android:ems="10"
         android:fontFamily="@font/righteous"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColor="#757575"
         android:textColorHint="@color/l_gray" />
 
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/righteous"
+        android:gravity="center"
+        android:text="Lupa Password?"
+        android:textColor="#757575"
+        android:onClick="btnLupa"
+        android:textSize="16sp" />
+
     <Button
         android:id="@+id/btnLogin"
+        android:onClick="btnLogin"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/confirm_round"
         android:fontFamily="@font/righteous"
         android:text="Login"
@@ -83,26 +96,15 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:onClick="btnDaftar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/righteous"
         android:gravity="center"
         android:text="Belum punya Akun?"
         android:textColor="#757575"
         android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/btnDaftar"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/register_btn"
-        android:fontFamily="@font/righteous"
-        android:onClick="btnDaftar"
-        android:text="Daftar"
-        android:textColor="#757575" />
 
 </LinearLayout>

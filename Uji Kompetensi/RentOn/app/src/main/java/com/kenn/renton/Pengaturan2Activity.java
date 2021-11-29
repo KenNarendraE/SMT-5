@@ -84,4 +84,9 @@ public class Pengaturan2Activity extends AppCompatActivity {
         Intent akun = new Intent(this, PengaturanActivity.class);
         startActivity(akun);
     }
+
+    public void btnPremium(View view) {
+        Intent intent = new Intent(this, PremiumActivity.class);
+        startActivity(intent);
+    }
 }

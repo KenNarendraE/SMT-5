@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RentOn</string>
+
+    <string-array name="Kategori">
+        <item>Furniture</item>
+        <item>Kendaraan</item>
+        <item>Elektronik</item>
+        <item>Komputer</item>
+        <item>Alat Pesta</item>
+    </string-array>
 </resources>

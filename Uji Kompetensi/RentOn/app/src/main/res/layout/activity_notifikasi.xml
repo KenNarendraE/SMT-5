@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kuning"
+    android:backgroundTint="@color/kuning"
+    android:orientation="vertical"
+    tools:context=".NotifikasiActivity">
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@drawable/unlocked" />
+
+    <TextView
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/righteous"
+        android:gravity="center"
+        android:text="Masukkan email anda dibawah ini untuk reset password"
+        android:textColor="#757575"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_round"
+        android:drawableLeft="@drawable/ic_org"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:fontFamily="@font/righteous"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="#757575"
+        android:textColorHint="@color/l_gray" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/confirm_round"
+        android:fontFamily="@font/righteous"
+        android:text="Konfirmasi"
+        android:textColor="#757575" />
+</LinearLayout>

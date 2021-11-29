@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,21 +7,28 @@
     android:background="@color/white"
     android:backgroundTint="@color/white"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".PasangIklanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/righteous"
         android:text="Masukkan Foto"
         android:textColor="#757575"
         android:textSize="18sp" />
 
     <EditText
+        android:id="@+id/etgambar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
@@ -31,6 +38,13 @@
         android:paddingLeft="10dp"
         android:textColor="#757575"
         android:textColorHint="@color/l_gray" />
+
+    <ImageView
+        android:id="@+id/Igambar"
+        android:onClick="iGambar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_addphoto"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -43,7 +57,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etjudul"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
@@ -80,14 +94,14 @@
 
             <EditText
 
-                android:id="@+id/editText2"
+                android:id="@+id/etharga"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginRight="16dp"
                 android:background="@drawable/round_yellow"
                 android:ems="10"
                 android:hint="Rp.7000"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 android:paddingLeft="10dp"
                 android:textColor="#757575"
                 android:textColorHint="@color/l_gray"
@@ -115,7 +129,7 @@
 
             <EditText
 
-                android:id="@+id/editText"
+                android:id="@+id/etkategori"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -143,6 +157,7 @@
         android:textSize="18sp" />
 
     <EditText
+        android:id="@+id/etalamat"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/round_yellow"
@@ -161,11 +176,36 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/righteous"
+        android:text="Nomor Telephone"
+        android:textColor="#757575"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etTelp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/round_yellow"
+        android:ems="10"
+        android:hint="Sidoarjo"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:textColor="#757575"
+        android:paddingRight="16dp"
+        android:drawableRight="@drawable/ic_phone"
+        android:textColorHint="@color/l_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/righteous"
         android:text="Deskripsi"
         android:textColor="#757575"
         android:textSize="18sp" />
 
     <EditText
+        android:id="@+id/etdeskripsi"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@drawable/round_yellow"
@@ -202,14 +242,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-
+                android:id="@+id/etwaktumin"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginRight="16dp"
                 android:background="@drawable/round_yellow"
                 android:ems="10"
                 android:hint="1 Hari"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 android:paddingLeft="10dp"
                 android:textColor="#757575"
                 android:textColorHint="@color/l_gray"
@@ -235,14 +275,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-
+                android:id="@+id/etwaktumax"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/round_yellow"
                 android:ems="10"
                 android:hint="7 Hari"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 android:paddingLeft="10dp"
                 android:textColor="#757575"
                 android:textColorHint="@color/l_gray"
@@ -252,12 +292,10 @@
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <Button
+            android:layout_marginTop="8dp"
             android:id="@+id/btnSimpan"
+            android:onClick="btnPosting"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="bottom"
@@ -271,7 +309,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
